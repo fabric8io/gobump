@@ -82,8 +82,11 @@ func bump(p versionPart, v semver.Version) semver.Version {
 	switch p {
 	case major:
 		v.Major++
+		v.Minor = 0
+		v.Patch = 0
 	case minor:
 		v.Minor++
+		v.Patch = 0
 	case patch:
 		v.Patch++
 	}
